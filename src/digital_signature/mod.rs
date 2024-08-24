@@ -14,7 +14,6 @@ struct User {
 
 impl User {
     fn generate_token(&self) -> Vec<u8> {
-        // let mut rng = rand::SystemRandom::new();
         let mut hasher = Sha256::new();
         hasher.update(&self.name);
         let hashed = hasher.finalize();
@@ -27,7 +26,7 @@ impl User {
         return private_key;
     }
     fn cast_vote() {
-        // TODO: Implement voting logic here
+        // TODO Implement voting logic here
         let private_key = Self::genarate_signature();
         let public_key = RsaPublicKey::from(&private_key);
         let message = b"This is a test message";
@@ -50,6 +49,7 @@ impl User {
 }
 
 pub fn digital_signature(create_user: CreateUser) {
+    //TODO Implement all the logic
     let user = User {
         id: create_user.id,
         name: create_user.name,

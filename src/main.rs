@@ -21,7 +21,7 @@ async fn main() {
     // our router
     let app = Router::new()
         .route("/", get(root))
-        .route("/get_voters", get(get_voters).post(create_voters))
+        .route("/getusers", get(get_voters).post(create_voters))
         .route("/createusers", post(create_voters));
 
     // which calls one of these handlers
